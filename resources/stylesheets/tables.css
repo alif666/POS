@@ -1,0 +1,90 @@
+/*@font-face {
+   font-family: 'FontAwesome';
+   src: url('/resources/fa/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}*/
+.combo-box-base {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, white;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+.button{
+  -fx-background-color: #87B87F;
+}
+
+/*.button:hover{
+  -fx-background-color: #629b58;  
+  -fx-background-radius: 3px, 3px, 2px, 1px;
+}*/
+
+.button:hover{
+    -fx-background-color: #629b58;
+}
+.button1 {
+     -fx-text-fill: white;
+      -fx-font-size:10;
+      -fx-font-weight: bold;
+      -fx-background-radius:0em;
+}
+
+.recipeButton {
+     -fx-text-fill: white;
+      -fx-font-size:14;
+      -fx-font-weight: bold;
+      -fx-background-radius:1em;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:105px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+/*.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}*/
+/*.tab:hover {
+    -fx-color: #ff0000;
+}*/
+
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #ffffff;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; 
+}
+.tab-label
+{
+      -fx-text-fill: #616161;
+}
+.tab-label:hover{
+       -fx-text-fill: #7CD590;
+       
+}
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+ .tab:top:selected {
+     -fx-border-color: #7CD590;
+     -fx-border-width: 4 0 0 0; 
+ }

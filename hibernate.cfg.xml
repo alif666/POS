@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ <hibernate-configuration>
+  <session-factory>
+                
+                 <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		 <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		 <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/umaiNewDatabase</property>
+		 <property name="hibernate.connection.username">postgres</property>
+		 <property name="hibernate.connection.password">postgres</property>
+		 <property name="show_sql">true</property>
+		 <property name="hbm2ddl.auto">update</property>
+   
+     
+                 
+                 
+                 
+                 <!--<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		 <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		 <property name="hibernate.connection.url">jdbc:postgresql://45.64.135.244:5432/honeycom_db_new</property>
+		 <property name="hibernate.connection.username">honeycom_user_new</property>
+		 <property name="hibernate.connection.password">T4]WIqK?6-pv</property>
+		 <property name="show_sql">true</property>
+		 <property name="hbm2ddl.auto">update</property>-->
+    
+
+    <!-- Mention here all the model classes along with their packagename -->
+    	         <mapping class="model.Users" />
+		 <mapping class="model.UserType" />
+		 <mapping class="model.Unit" />
+		 <mapping class="model.IngredientsCategory"/>
+		 <mapping class="model.Ingredients"/>
+		 <mapping class="model.SubIngredients"/>
+		 <mapping class="model.MenuCategory"/>
+		 <mapping class="model.IngredientSubIngredient"/>
+		 <mapping class="model.Recipe"/>
+		 <mapping class="model.RecipeIngredients"/>
+		 <mapping class="model.Tables"/>
+                 <mapping class="model.SalesInfo"/>
+                 <mapping class="model.SalesDetails"/>
+  </session-factory>
+</hibernate-configuration> 

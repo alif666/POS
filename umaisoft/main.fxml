@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <top>
+      <MenuBar prefHeight="9.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handle" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane>
+         <top>
+            <HBox prefHeight="66.0" prefWidth="1200.0" style="-fx-background-color: #7CD590;">
+               <children>
+                  <Label prefHeight="66.0" prefWidth="372.0" text="UMAI Requisition  Management Portal">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <TextField alignment="TOP_LEFT" prefHeight="25.0" prefWidth="204.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets right="40.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="740.0" prefWidth="174.0" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="146.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/umaiLogo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="640.0" prefWidth="673.0" style="-fx-background-color: #ffffff;" stylesheets="@../resources/stylesheets/main.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="123.0" text="New Order" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TabPane prefHeight="569.0" prefWidth="693.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="ORDER ENTRY">
+                        <content>
+                              <StackPane fx:id="orderEntryPane" prefHeight="568.0" prefWidth="851.0">
+                                 <children>
+                                    <HBox prefHeight="181.0" prefWidth="750.0">
+                                       <children>
+                                          <Button fx:id="dineInButton" mnemonicParsing="false" onAction="#dineInButtonAction" prefHeight="58.0" prefWidth="700.0" text="Dine In" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" top="50.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="takeAwayButton" mnemonicParsing="false" onAction="#takeAwayButtonAction" prefHeight="58.0" prefWidth="700.0" text="Take Away" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="10.0" top="50.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                       <StackPane.margin>
+                                          <Insets />
+                                       </StackPane.margin>
+                                    </HBox>
+                                 </children>
+                              </StackPane>
+                        </content>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/fonts/awesome_blue.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                      </Tab>
+                      <Tab text="LIVE ORDERS">
+                        <content>
+                          <AnchorPane fx:id="liveTabs" minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="984.0">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <GridPane prefHeight="32.0" prefWidth="750.0" style="-fx-background-color: #eee;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="83.0" text="Table">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="80.0" text="Sub Total" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="122.0" text="Vat" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="96.0" text="SC" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="89.0" text="Discount" GridPane.columnIndex="4">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="83.0" text="Total" GridPane.columnIndex="5">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane fx:id="liveOrderGrid" layoutX="10.0" layoutY="20.0" prefHeight="32.0" prefWidth="750.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children></AnchorPane>
+                        </content>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/fonts/awesome_orange.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                      </Tab>
+                        <Tab text="BILLING">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="984.0" />
+                           </content>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/fonts/awesome_red.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Tab>
+                    </tabs>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </TabPane>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <VBox prefHeight="740.0" prefWidth="296.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <ComboBox prefHeight="25.0" prefWidth="108.0" promptText="Take Away" />
+                        <Region prefHeight="32.0" prefWidth="74.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Region>
+                        <Label prefHeight="24.0" prefWidth="47.0" text="Disc(%)" />
+                        <TextField prefHeight="25.0" prefWidth="41.0" promptText="0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </center>
+</BorderPane>

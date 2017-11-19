@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1250.0" stylesheets="@../resources/stylesheets/main.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TablesController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="74.0" prefWidth="1250.0" style="-fx-background-color: #7CD590;">
+               <children>
+                  <Label prefHeight="66.0" prefWidth="372.0" text="UMAI Requisition  Management Portal">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <TextField alignment="TOP_LEFT" prefHeight="25.0" prefWidth="204.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets right="40.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="740.0" prefWidth="174.0" style="-fx-background-color: #616161;">
+               <children>
+                  <VBox prefHeight="509.0" prefWidth="174.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #212121;" text="LIVE ORDERS" textFill="#ddd537">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="319.0" prefWidth="174.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #212121;" text="TAKE AWAY" textFill="#ddd537">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="button" mnemonicParsing="false" prefHeight="51.0" prefWidth="123.0" style="-fx-background-color: #87B87F;" text="New Order" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <TabPane prefHeight="677.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="ORDER ENTRY">
+                        <content>
+                              <VBox>
+                                 <children>
+                                    <HBox fx:id="guestNumber" prefHeight="22.0" prefWidth="719.0">
+                                       <children>
+                                          <ComboBox fx:id="waiterBox" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                          <TextField fx:id="guest">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <AnchorPane fx:id="anchor_pane" prefHeight="638.0" prefWidth="780.0" />
+                                 </children>
+                              </VBox>
+                        </content>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/fonts/awesome_blue.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                      </Tab>
+                      <Tab text="LIVE ORDERS">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/fonts/awesome_orange.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                      </Tab>
+                        <Tab text="BILLING">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/fonts/awesome_red.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="740.0" prefWidth="296.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <ComboBox prefHeight="25.0" prefWidth="108.0" promptText="Take Away" />
+                              <Region prefHeight="32.0" prefWidth="74.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Region>
+                              <Label prefHeight="24.0" prefWidth="47.0" text="Disc(%)" />
+                              <TextField prefHeight="25.0" prefWidth="41.0" promptText="0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handle" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

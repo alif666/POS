@@ -1,0 +1,181 @@
+/*@font-face {
+   font-family: 'FontAwesome';
+   src: url('/resources/fa/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+.combo-box .list-cell 
+{
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+}
+
+.combo-box-popup .list-view 
+{
+  
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell 
+{
+    -fx-padding: 4 0 4 5;
+
+    
+    -fx-background-color: white;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+    -fx-background-color: white;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+.combo-box-base  
+{
+    -fx-skin: "com.sun.javafx.scene.control.skin.ComboBoxBaseSkin";
+    -fx-background-color: white, white, white, white;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+}
+
+.combo-box-base:hover
+{
+    -fx-color: -fx-hover-base;
+}
+
+.combo-box-base:showing 
+{
+    -fx-color: -fx-pressed-base;
+}
+
+.combo-box-base:focused {
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-radius: 6.4, 4, 5, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;
+}
+
+*/
+
+
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('MyriadPro-Regular.ttf');
+}
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+ 
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.list-cell:empty {
+    -fx-background-color: white;
+}
+.combo-box-base {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, white;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+.button{
+  -fx-background-color: #87B87F;
+}
+
+/*.button:hover{
+  -fx-background-color: #629b58;  
+  -fx-background-radius: 3px, 3px, 2px, 1px;
+}*/
+
+.button:hover{
+    -fx-background-color: #629b58;
+}
+.button1 {
+     -fx-text-fill: white;
+      -fx-font-size:10;
+      -fx-font-weight: bold;
+      -fx-background-radius:0em;
+}
+
+.recipeButton {
+     -fx-text-fill: white;
+      -fx-font-size:14;
+      -fx-font-weight: bold;
+      -fx-background-radius:1em;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:105px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+/*.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}*/
+/*.tab:hover {
+    -fx-color: #ff0000;
+}*/
+
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #ffffff;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; 
+}
+.tab-label
+{
+      -fx-text-fill: #616161;
+}
+.tab-label:hover{
+       -fx-text-fill: #7CD590;
+       
+}
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+ .tab:top:selected {
+     -fx-border-color: #7CD590;
+     -fx-border-width: 4 0 0 0; 
+ }
+ .toggle-button{
+    -fx-background-color: #87B87F;
+    -fx-text-fill: white;
+ }
+.toggle-button:focused,
+.toggle-button:selected,
+.toggle-button:selected:focused {
+    -fx-border-color: #2E7D32;
+    -fx-border-width: 3px;
+    -fx-text-fill: white;
+}
